@@ -1,0 +1,12 @@
+[
+  {"address":"Какой-то адрес1","fio":"Соломатов Вячеслав Владимирович","contacts":"+79193908187","tariff":"Тариф 1", "connectionDate":"2018-11-23","numberOfContract":"1"},
+  {"address":"Какой-то адрес2","fio":"Иванов Иван Иванович","contacts":"+79630477538","tariff":"Тариф 2", "connectionDate":"2018-11-24","numberOfContract":"2"},
+  {"address":"Какой-то адрес3","fio":"Соломатов Вячеслав Владимирович","contacts":"+79193908187","tariff":"Тариф 3", "connectionDate":"2018-11-23","numberOfContract":"3"},
+  {"address":"Какой-то адрес4","fio":"Иванов Иван Иванович","contacts":"+79630477538","tariff":"Тариф 4", "connectionDate":"2018-11-24","numberOfContract":"4"},
+  {"address":"Какой-то адрес5","fio":"Соломатов Вячеслав Владимирович","contacts":"+79193908187","tariff":"Тариф 5", "connectionDate":"2018-11-23","numberOfContract":"5"},
+  {"address":"Какой-то адрес6","fio":"Иванов Иван Иванович","contacts":"+79630477538","tariff":"Тариф 6", "connectionDate":"2018-11-24","numberOfContract":"6"},
+  {"address":"Какой-то адрес7","fio":"Соломатов Вячеслав Владимирович","contacts":"+79193908187","tariff":"Тариф 7", "connectionDate":"2018-11-23","numberOfContract":"7"},
+  {"address":"Какой-то адрес8","fio":"Иванов Иван Иванович","contacts":"+79630477538","tariff":"Тариф 8", "connectionDate":"2018-11-24","numberOfContract":"8"},
+  {"address":"Какой-то адрес9","fio":"Соломатов Вячеслав Владимирович","contacts":"+79193908187","tariff":"Тариф 9", "connectionDate":"2018-11-23","numberOfContract":"9"},
+  {"address":"Какой-то адрес10","fio":"Иванов Иван Иванович","contacts":"+79630477538","tariff":"Тариф 10", "connectionDate":"2018-11-24","numberOfContract":"10"}
+]
