@@ -3,6 +3,7 @@ package com.solomatoff.testprofintel;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,8 +15,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,9 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 // ToDo доделать
                 Intent intent = new Intent(context, OneNotesActivity.class);
                 // Формируем интент
-                String noteAddress = jsonObj[position].getAddress();
-                intent.putExtra(OneNotesActivity.EXTRA_NOTE_ADDRESS, noteAddress);
-                context.startActivity(intent);
+                Note note = jsonObj[position];
+                ArrayList<Note> list = new ArrayList<>();
+                list.add(note);
+                intent.putParcelableArrayListExtra(OneNotesActivity.EXTRA_LIST_NOTE, list);
+                startActivity(intent);
             }
         });
     }
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         // Создаем диалоговое окно
         // Надуваем макет
         LayoutInflater inflater = getLayoutInflater();
-        final View view = inflater.inflate(R.layout.alert_dialog_create_note, null);
+        final View view = inflater.inflate(R.layout.one_note, null);
         // Создаем AlertDialog.Builder
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogTheme);
         // Устанавливаем полученную ранее разметку в builder

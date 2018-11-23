@@ -3,6 +3,7 @@
     <string name="alert_dialog_cancel">Отменить</string>
     <string name="alert_dialog_create_button_ok">Создать</string>
     <string name="alert_dialog_create_note">Создать новую заметку</string>
+    <string name="action_note">Редактирование</string>
     <string name="input_address">Введите адрес</string>
     <string name="input_fio">Введите ФИО</string>
     <string name="input_contacts">Введите контактные данные</string>
@@ -10,4 +11,6 @@
     <string name="input_connectionDate">Введите дату подключения</string>
     <string name="input_numberOfContract">Введите номер договора</string>
     <string name="alert_dialog_save_button">Сохранить</string>
+    <string name="action_save">Сохранить</string>
+
 </resources>
