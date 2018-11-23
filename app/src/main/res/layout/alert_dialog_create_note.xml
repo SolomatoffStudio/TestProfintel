@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/alert_dialog_create_note"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_address"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_fio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_fio"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_contacts"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_tariff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_tariff"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_connectionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_connectionDate"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/new_numberOfContract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/input_numberOfContract"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/alert_dialog_cancel"
+            android:textColor="@color/colorBlack" />
+
+        <Button
+            android:id="@+id/button_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/alert_dialog_create_button_ok"
+            android:textColor="@color/colorBlack" />
+
+    </LinearLayout>
+
+</LinearLayout>

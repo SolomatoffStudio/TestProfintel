@@ -66,12 +66,10 @@ public class ListNotesArrayAdapter extends ArrayAdapter<Note> {
         final ViewHolder holder = (ViewHolder) view.getTag();
         final int finalPosition = position; // Создаем финализированную переменную finalPosition
         Log.i(this.getClass().toString(), String.format("getView. ListNotesArrayAdapter[%d].getAddress() = %s", position, Notes[position].getAddress()));
-
         holder.noteAddress.setText(Notes[position].getAddress());
         holder.noteFio.setText(Notes[position].getFio());
         holder.noteContacts.setText(Notes[position].getContacts());
         holder.noteTariff.setText(Notes[position].getTariff());
-
         // Назначаем СЛУШАТЕЛЯ для строки
         view.setOnClickListener(new View.OnClickListener() {
             @Override

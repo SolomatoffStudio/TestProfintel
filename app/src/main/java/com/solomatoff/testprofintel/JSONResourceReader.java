@@ -9,24 +9,17 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 /**
- * An object for reading from a JSON resource file and constructing an object from that resource file using Gson.
+ * Класс для чтения из файла ресурсов JSON и создания объекта из этого файла ресурсов с помощью Gson.
  */
 public class JSONResourceReader {
-
-    // === [ Private Data Members ] ============================================
-
-    // Our JSON, in string form.
+    // Наш json в форме строки
     private String jsonString;
     private static final String LOGTAG = JSONResourceReader.class.getSimpleName();
-
-    // === [ Public API ] ======================================================
-
     /**
-     * Read from a resources file and create a {@link JSONResourceReader} object that will allow the creation of other
-     * objects from this resource.
+     * Метод читает из файла ресурсов и создает строку
      *
-     * @param resources An application {@link Resources} object.
-     * @param id The id for the resource to load, typically held in the raw/ folder.
+     * @param resources ресурсы приложения
+     * @param id Идентификатор загружаемого ресурса, обычно хранящийся в папке raw.
      */
     public JSONResourceReader(Resources resources, int id) {
         InputStream resourceReader = resources.openRawResource(id);
@@ -47,17 +40,16 @@ public class JSONResourceReader {
                 Log.e(LOGTAG, "Unhandled exception while using JSONResourceReader", e);
             }
         }
-
         jsonString = writer.toString();
         Log.i(LOGTAG, jsonString);
     }
 
     /**
-     * Build an object from the specified JSON resource using Gson.
+     * Создает объект из указанного ресурса JSON с помощью Gson.
      *
-     * @param type The type of the object to build.
+     * @param type тип объекта для построения
      *
-     * @return An object of type T, with member fields populated using Gson.
+     * @return Объект типа T, с полями-членами, заполненными с помощью Gson.
      */
     public <T> T constructUsingGson(Class<T> type) {
         Gson gson = new GsonBuilder().create();
