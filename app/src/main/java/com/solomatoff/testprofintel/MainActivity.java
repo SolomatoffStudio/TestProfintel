@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         JSONResourceReader reader = new JSONResourceReader(getResources(), R.raw.jsonfile);
-        Note[] jsonObj = reader.constructUsingGson(Note[].class);
+        final Note[] jsonObj = reader.constructUsingGson(Note[].class);
         ListView listView = findViewById(R.id.lv_notes);
         // Создаем адаптер
         ListNotesArrayAdapter listAdapter = new ListNotesArrayAdapter((Activity) context, R.layout.notes_row, jsonObj);
@@ -54,13 +54,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(int position) {
                 Log.i(this.getClass().toString(), String.format("    onCreate. listAdapter.setListenerView. onClick. position = %d", position));
                 // ToDo доделать
-                /*Intent intent = new Intent(context, OneNotesActivity.class);
+                Intent intent = new Intent(context, OneNotesActivity.class);
                 // Формируем интент
-                int idItem = listNotes.get(position).getId();
-                intent.putExtra(OneNotesActivity.EXTRA_ID_ITEM, idItem);
-                String nameItem = listNotes.get(position).getVacancy_name();
-                intent.putExtra(OneNotesActivity.EXTRA_ID_NAME, nameItem);
-                context.startActivity(intent);*/
+                String noteAddress = jsonObj[position].getAddress();
+                intent.putExtra(OneNotesActivity.EXTRA_NOTE_ADDRESS, noteAddress);
+                context.startActivity(intent);
             }
         });
     }
